@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Mixer | Kova Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎧 KOVA <span class="highlight">DJ MIXER</span></h1>
+            <p class="subtitle">WebAudio Powered</p>
+        </header>
+
+        <main class="mixer-board">
+            <!-- Deck A -->
+            <section class="deck" id="deck-a">
+                <h2>DECK A</h2>
+                <div class="vinyl-container">
+                    <canvas id="vinyl-a" width="200" height="200"></canvas>
+                </div>
+                <canvas id="waveform-a" class="waveform" width="280" height="60"></canvas>
+                
+                <div class="track-selector">
+                    <label>Track:</label>
+                    <select id="track-select-a">
+                        <option value="kick">Kick Loop</option>
+                        <option value="bass">Bass Loop</option>
+                        <option value="hihat">Hi-Hat Loop</option>
+                        <option value="synth">Synth Loop</option>
+                    </select>
+                    <button class="load-btn" data-deck="a">LOAD</button>
+                </div>
+
+                <div class="transport">
+                    <button class="play-btn" id="play-a">▶ PLAY</button>
+                </div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label>PITCH <span id="pitch-val-a">0%</span></label>
+                        <input type="range" id="pitch-a" min="-16" max="16" value="0" class="slider pitch-slider">
+                    </div>
+                    <div class="control-group">
+                        <label>VOLUME</label>
+                        <input type="range" id="volume-a" min="0" max="100" value="80" class="slider volume-slider" orient="vertical">
+                    </div>
+                </div>
+
+                <div class="eq-section">
+                    <h3>EQ</h3>
+                    <div class="eq-controls">
+                        <div class="eq-knob">
+                            <label>HI</label>
+                            <input type="range" id="eq-high-a" min="-12" max="12" value="0" class="eq-slider">
+                        </div>
+                        <div class="eq-knob">
+                            <label>MID</label>
+                            <input type="range" id="eq-mid-a" min="-12" max="12" value="0" class="eq-slider">
+                        </div>
+                        <div class="eq-knob">
+                            <label>LOW</label>
+                            <input type="range" id="eq-low-a" min="-12" max="12" value="0" class="eq-slider">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center Mixer -->
+            <section class="mixer-center">
+                <canvas id="spectrum" width="200" height="150"></canvas>
+                
+                <div class="crossfader-section">
+                    <label>A</label>
+                    <input type="range" id="crossfader" min="0" max="100" value="50" class="crossfader">
+                    <label>B</label>
+                </div>
+                
+                <div class="master-section">
+                    <label>MASTER</label>
+                    <input type="range" id="master-volume" min="0" max="100" value="80" class="slider master-slider">
+                </div>
+
+                <div class="bpm-display">
+                    <span id="bpm-value">120</span> BPM
+                </div>
+            </section>
+
+            <!-- Deck B -->
+            <section class="deck" id="deck-b">
+                <h2>DECK B</h2>
+                <div class="vinyl-container">
+                    <canvas id="vinyl-b" width="200" height="200"></canvas>
+                </div>
+                <canvas id="waveform-b" class="waveform" width="280" height="60"></canvas>
+                
+                <div class="track-selector">
+                    <label>Track:</label>
+                    <select id="track-select-b">
+                        <option value="kick">Kick Loop</option>
+                        <option value="bass" selected>Bass Loop</option>
+                        <option value="hihat">Hi-Hat Loop</option>
+                        <option value="synth">Synth Loop</option>
+                    </select>
+                    <button class="load-btn" data-deck="b">LOAD</button>
+                </div>
+
+                <div class="transport">
+                    <button class="play-btn" id="play-b">▶ PLAY</button>
+                </div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label>PITCH <span id="pitch-val-b">0%</span></label>
+                        <input type="range" id="pitch-b" min="-16" max="16" value="0" class="slider pitch-slider">
+                    </div>
+                    <div class="control-group">
+                        <label>VOLUME</label>
+                        <input type="range" id="volume-b" min="0" max="100" value="80" class="slider volume-slider" orient="vertical">
+                    </div>
+                </div>
+
+                <div class="eq-section">
+                    <h3>EQ</h3>
+                    <div class="eq-controls">
+                        <div class="eq-knob">
+                            <label>HI</label>
+                            <input type="range" id="eq-high-b" min="-12" max="12" value="0" class="eq-slider">
+                        </div>
+                        <div class="eq-knob">
+                            <label>MID</label>
+                            <input type="range" id="eq-mid-b" min="-12" max="12" value="0" class="eq-slider">
+                        </div>
+                        <div class="eq-knob">
+                            <label>LOW</label>
+                            <input type="range" id="eq-low-b" min="-12" max="12" value="0" class="eq-slider">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built by <strong>Kova</strong> | WebAudio API + Canvas</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
