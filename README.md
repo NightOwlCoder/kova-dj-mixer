@@ -4,7 +4,7 @@ Interactive web-based DJ mixer with dual decks, EQ, and real-time audio visualiz
 
 ## ✨ [**LIVE DEMO**](https://nightowlcoder.github.io/kova-dj-mixer/)
 
-![DJ Mixer Screenshot](https://via.placeholder.com/800x450/1a0a2e/bf5af2?text=DJ+Mixer+Demo)
+![DJ Mixer Screenshot](screenshot.png)
 
 ---
 
